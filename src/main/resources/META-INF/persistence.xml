@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation=
+                     "http://java.sun.com/xml/ns/persistence
+http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+             version="1.0">
+    <persistence-unit name="contact" transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <class>com.fibo.contactmanager.domain.Contact</class>
+        <properties>
+
+            <!-- Controls if database schema should be verified or created. For first startup  'create'
+            should be used to initialize database. Thereafter 'validate' must
+             be used for production. -->
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+            <property name="hibernate.connection.autocommit" value="false"/>
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.connection.release_mode"
+                      value="on_close"/>
+            <property name="hibernate.connection.pool_size" value="5"/>
+            <property name="hibernate.connection.shutdown" value="true"/>
+            <property name="javax.persistence.validation.mode" value="none"/>
+            <property name="hibernate.validator.autoregister_listeners"
+                      value="false"/>
+
+            <!-- H2 -Default Internal Database -->
+            <property name="hibernate.connection.url"
+                      value="jdbc:h2:~/contacts"/>
+            <property name="hibernate.connection.username" value="user"/>
+            <property name="hibernate.connection.password" value="password"/>
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.H2Dialect"/>
+            <property name="hibernate.connection.driver_class"
+                      value="org.h2.Driver"/>
+        </properties>
+    </persistence-unit>
+</persistence>
