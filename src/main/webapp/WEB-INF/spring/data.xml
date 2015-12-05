@@ -39,12 +39,12 @@
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
           p:location="/WEB-INF/jdbc.properties"/>
 
-    <!-- dataSource bean-->
+  <!--  &lt;!&ndash; dataSource bean&ndash;&gt;
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource"
           p:driverClassName="${jdbc.driverClassName}"
           p:url="${jdbc.databaseurl}"
           p:username="${jdbc.username}"
-          p:password="${jdbc.password}"/>
+          p:password="${jdbc.password}"/>-->
 
 </beans>
