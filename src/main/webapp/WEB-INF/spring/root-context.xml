@@ -19,7 +19,7 @@
 
     <!-- @Annotation-based configuration-->
     <context:annotation-config/>
-
+  
     <!-- @Component, @Service-->
     <context:component-scan base-package="com.fibo.contactmanager.dao"/>
     <context:component-scan base-package="com.fibo.contactmanager.service"/>
@@ -32,8 +32,6 @@
     <!--creates the EntityManagerFactory-->
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalEntityManagerFactoryBean"/>
-
-
 
     <!--Spring container will act as a JPA container and inject an
      EnitityManager from  EntityManagerFactory.-->
