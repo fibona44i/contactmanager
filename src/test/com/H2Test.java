@@ -1,3 +1,5 @@
+package com;
+
 import javax.persistence.PersistenceContext;
 import org.junit.Before;
 import org.junit.Test;

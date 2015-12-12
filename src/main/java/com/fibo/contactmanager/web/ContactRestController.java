@@ -1,9 +1,5 @@
-/**
- * Copyright (c) 2011, Axiomatics AB, Sweden.
- * All rights reserved.
- * <p/>
- * This software is the confidential and proprietary information of Axiomatics AB.
- */
+import org.springframework.stereotype.Controller;
+
 package com.fibo.contactmanager.web;
 
 import java.util.List;
